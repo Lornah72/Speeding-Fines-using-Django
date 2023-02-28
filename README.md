@@ -8,4 +8,4 @@ This GitHub repo contains an automated website for traffic officers to enter dri
 ![home2](https://user-images.githubusercontent.com/68066226/221919402-58832c5c-5a01-4fcd-adbe-46de5bf695e2.PNG)
 ![home1](https://user-images.githubusercontent
 ![home](https://user-images.githubusercontent.com/68066226/221920099-40a411e4-37b9-4ddc-860f-dc3243825f34.PNG)
-![login](https://user-images.githubusercontent.com/68066226/221919424-12ffda3e-d6a7-45b3-af0c-8f9b15e6043f.PNG)
+
