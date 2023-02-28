@@ -1,5 +1,7 @@
 # Speeding-Fines-using-Django
 This GitHub repo contains an automated website for traffic officers to enter driver details and speed to calculate fines. The website sends an email to the driver with the fine amount, streamlining the process and improving accuracy. Built using modern web dev tech with strong security and documentation.
+
+
 #Page screenshots
 
 ![login](https://user-images.githubusercontent.com/68066226/221919424-12ffda3e-d6a7-45b3-af0c-8f9b15e6043f.PNG)
