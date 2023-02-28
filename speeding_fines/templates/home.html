@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <style>
+      body {
+        background-color: #0e2433;
+        font-family: sans-serif;
+      }
+      h1 {
+        color: white;
+        text-align: center;
+        padding-top: 50px;
+      }
+      form {
+        text-align: center;
+        margin-top: 50px;
+      }
+      label {
+        display: block;
+        margin-bottom: 10px;
+        color: white;
+      }
+      input[type="text"],
+      input[type="number"] {
+        width: 200px;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        margin-bottom: 20px;
+      }
+      button[type="submit"] {
+        background-color: #b721ff;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        margin-top: 30px;
+        text-align: center;
+      }
+      li {
+        margin-bottom: 10px;
+        color: white;
+      }
+      p {
+        text-align: center;
+        color: white;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Search for Drivers by License Plate Number</h1>
+    <form method="post">
+      {% csrf_token %}
+      <label for="license_plate">License Plate:</label>
+      <input type="text" name="license_plate" id="license_plate">
+      <label for="speed">Speed (in km/hr):</label>
+      <input type="number" name="speed" id="speed">
+      <button type="submit">Search</button>
+    </form>
+    {% if message %}
+      <p>{{ message }}</p>
+      {% if driver_names %}
+        <ul>
+          {% for name in driver_names %}
+            <li>{{ name }}</li>
+          {% endfor %}
+        </ul>
+        {% if speeding %}
+          <p>{{ speeding }}</p>
+        {% endif %}
+      {% endif %}
+    {% endif %}
+  </body>
+</html>
